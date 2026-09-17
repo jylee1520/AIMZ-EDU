@@ -519,3 +519,9 @@ footer{padding-block:56px 36px;border-top:1px solid var(--line)}
 @media (min-width:1041px) and (max-width:1180px){.hdr-act .btn-labs{display:inline-flex}}
 /* 교육과정 페이지 상단의 섹션 바로가기 */
 .jump{padding:22px 0 0}
+
+/* ---------- _14: 교육과정 · 대학 트랙을 함께 여는 머리글 ---------- */
+.sec-side{max-width:640px}
+.sec-side h3{font-size:clamp(22px,2.6vw,32px);line-height:1.26;letter-spacing:-.032em;font-weight:700;margin:0;color:var(--text)}
+.sec-side .lead{margin-top:14px;max-width:none}
+@media (max-width:1080px){.sec-side{max-width:none}}
