@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#fafaf7">
 <link rel="icon" href="assets/logo/mark_navy.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="assets/css/site_9.css">
+<link rel="stylesheet" href="assets/css/site_10.css">
 </head>
 <body class="t-light">
 
@@ -18,9 +18,7 @@
     <button class="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="nav" aria-label="주요 메뉴">
       <a href="courses.html">교육과정</a>
-      <a href="tracks.html">대학 트랙</a>
       <a href="platform.html">실습 플랫폼</a>
-      <a href="pricing.html">요금</a>
       <a href="safety.html">안전</a>
       <a href="cases.html">운영 사례</a>
       <a href="support.html">지원</a>
@@ -29,8 +27,8 @@
       <a class="m-only" href="contact.html">교육 문의</a>
     </nav>
     <div class="hdr-act">
-      <a class="btn btn-line btn-sm" href="https://www.aimzlabs.com/" target="_blank" rel="noopener">AIMZ LABS ↗</a>
-      <a class="btn btn-accent btn-sm" href="contact.html">교육 문의</a>
+      <a class="btn btn-accent btn-sm btn-labs" href="https://www.aimzlabs.com/" target="_blank" rel="noopener">AIMZ LABS ↗</a>
+      <a class="btn btn-navy btn-sm" href="contact.html">교육 문의</a>
     </div>
   </div>
 </header>
@@ -84,7 +82,7 @@
     </div>
     <div class="aud">
       <a class="rv" href="courses.html"><img src="assets/img/seminar.jpg" alt="" loading="lazy"><span class="go">→</span><div><small>FOR TEAMS</small><h3>기관 · 기업 임직원</h3><p>기초 · 심화 · 전문 3개 과정 · 1일 · 20명 이하</p></div></a>
-      <a class="rv" href="tracks.html"><img src="assets/img/comfy-class.jpg" alt="" loading="lazy"><span class="go">→</span><div><small>FOR CAMPUS</small><h3>대학 · 교육기관</h3><p>ComfyUI 전문 · 특화 · 일반 3개 트랙 + 통합 실습 플랫폼</p></div></a>
+      <a class="rv" href="courses.html#tracks"><img src="assets/img/comfy-class.jpg" alt="" loading="lazy"><span class="go">→</span><div><small>FOR CAMPUS</small><h3>대학 · 교육기관</h3><p>ComfyUI 전문 · 특화 · 일반 3개 트랙 + 통합 실습 플랫폼</p></div></a>
     </div>
   </div>
 </section>
@@ -92,16 +90,14 @@
 <!-- ================= MENU ================= -->
 <section id="menu">
   <div class="wrap">
-    <div class="sec-head rv"><div><span class="eyebrow">Explore</span><h2 class="h2">필요한 내용만 골라 보세요</h2></div><p class="lead">메뉴를 누르면 해당 페이지로 이동합니다.</p></div>
-    <div class="grid-4 menu">
-      <a class="card rv" href="courses.html"><div><span class="n">01</span><h3>교육과정</h3><p>기관·기업 기초 · 심화 · 전문 3과정, 교육비와 수준 진단</p></div><span class="go">→</span></a>
-      <a class="card rv" href="tracks.html"><div><span class="n">02</span><h3>대학 트랙</h3><p>ComfyUI 전문 · 특화 4개 · 일반 7개 과정</p></div><span class="go">→</span></a>
-      <a class="card rv" href="platform.html"><div><span class="n">03</span><h3>실습 플랫폼</h3><p>학교 계정 하나로 여러 AI, 도입 필요성과 대안 비교</p></div><span class="go">→</span></a>
-      <a class="card rv" href="pricing.html"><div><span class="n">04</span><h3>요금</h3><p>크레딧 단가, 학기 시나리오, 개별 구독 대비 비용</p></div><span class="go">→</span></a>
-      <a class="card rv" href="safety.html"><div><span class="n">05</span><h3>안전</h3><p>일곱 겹의 안전장치와 자주 묻는 질문</p></div><span class="go">→</span></a>
-      <a class="card rv" href="cases.html"><div><span class="n">06</span><h3>운영 사례</h3><p>교육 이력 15건과 대표 사례 3건</p></div><span class="go">→</span></a>
-      <a class="card rv" href="support.html"><div><span class="n">07</span><h3>지원</h3><p>운영 대행, 응답 시간 기준, 강사진</p></div><span class="go">→</span></a>
-      <a class="card red rv" href="contact.html"><div><span class="n">08</span><h3>문의</h3><p>1개 학기 시범 운영부터 시작할 수 있습니다</p></div><span class="go">→</span></a>
+    <div class="sec-head rv"><div><span class="eyebrow">Explore</span><h2 class="h2">필요한 내용만 골라 보세요</h2></div><p class="lead">메뉴를 누르면 해당 페이지로 이동합니다. 대학 트랙은 교육과정 안에 있습니다.</p></div>
+    <div class="grid-3 menu">
+      <a class="card rv" href="courses.html"><div><span class="n">01</span><h3>교육과정</h3><p>기관·기업 1일 3과정과 대학 학기 트랙, 수준별 사전 진단</p></div><span class="go">→</span></a>
+      <a class="card rv" href="platform.html"><div><span class="n">02</span><h3>실습 플랫폼</h3><p>학교 계정 하나로 여러 AI, 도입 필요성과 대안 비교</p></div><span class="go">→</span></a>
+      <a class="card rv" href="safety.html"><div><span class="n">03</span><h3>안전</h3><p>일곱 겹의 안전장치와 자주 묻는 질문</p></div><span class="go">→</span></a>
+      <a class="card rv" href="cases.html"><div><span class="n">04</span><h3>운영 사례</h3><p>교육 이력 15건과 대표 사례 3건</p></div><span class="go">→</span></a>
+      <a class="card rv" href="support.html"><div><span class="n">05</span><h3>지원</h3><p>운영 대행, 응답 시간 기준, 강사진</p></div><span class="go">→</span></a>
+      <a class="card red rv" href="contact.html"><div><span class="n">06</span><h3>문의</h3><p>1개 학기 시범 운영부터 시작할 수 있습니다</p></div><span class="go">→</span></a>
     </div>
   </div>
 </section>
@@ -120,7 +116,7 @@
   <div class="wrap">
     <div class="ft">
       <div><img src="assets/logo/edu_navy.png" alt="AIMZ EDU"><p>주식회사 에임즈미디어 · 콘텐츠엔지니어링센터<br>대전 본사 · 서울 지사 · studio.aimzedu.com<br>AIMZ lifts your AIM</p></div>
-      <div><h4>AIMZ EDU</h4><ul><li><a href="courses.html">교육과정</a></li><li><a href="tracks.html">대학 트랙</a></li><li><a href="platform.html">실습 플랫폼</a></li><li><a href="pricing.html">요금</a></li></ul></div>
+      <div><h4>AIMZ EDU</h4><ul><li><a href="courses.html">교육과정</a></li><li><a href="courses.html#tracks">대학 트랙</a></li><li><a href="platform.html">실습 플랫폼</a></li><li><a href="contact.html">교육 문의</a></li></ul></div>
       <div><h4>CONTACT</h4><ul><li><a href="mailto:jinhlee@aimz.media">jinhlee@aimz.media</a></li><li><a href="mailto:contact@aimz.media">contact@aimz.media</a></li></ul></div>
     </div>
     <div class="fb"><span>© 2026 AIMZ MEDIA Inc. All rights reserved.</span><span>AIMZ EDU 교육과정 · 도입 제안 2026</span></div>
