@@ -639,4 +639,4 @@ footer{padding-block:56px 36px;border-top:1px solid var(--line)}
 .person a+a{margin-top:6px}
 
 /* ---------- _29: 강사 사진이 카드 높이에 맞춰 늘어나며 위아래가 잘리던 것 ---------- */
-.person img{height:auto;aspect-ratio:5/6;align-self:start}
+.person img{height:auto;aspect-ratio:5/6;align-self:center}
