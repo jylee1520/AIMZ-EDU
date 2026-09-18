@@ -633,3 +633,7 @@ footer{padding-block:56px 36px;border-top:1px solid var(--line)}
   .facts div:nth-child(2){border-right:0}
   .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
 }
+
+/* ---------- _28: 강사 카드에 링크가 둘 이상일 때 세로로 쌓는다 ---------- */
+.person a{display:block;width:max-content;max-width:100%}
+.person a+a{margin-top:6px}
