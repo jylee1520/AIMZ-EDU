@@ -594,3 +594,42 @@ footer{padding-block:56px 36px;border-top:1px solid var(--line)}
   .totop{right:12px;bottom:12px}
   .form .fine{font-size:13px;line-height:1.6}
 }
+
+/* ---------- _27: 강사 소개 ---------- */
+.span2{grid-column:span 2}
+.facts i{font-style:normal;font-size:16px;margin-left:1px}
+.checks li>span{min-width:0}
+/* 칸 안에 <b> 같은 태그가 섞이면 grid 항목이 쪼개져 줄이 어긋난다 — 이름표를 절대 배치로 */
+@media (max-width:760px){
+  .table.stack td{display:block;position:relative;padding:5px 0 5px 96px;min-height:22px}
+  .table.stack td::before{position:absolute;left:0;top:5px;width:88px}
+  .table.stack td.hl{padding:7px 10px 7px 96px;margin:2px -10px}
+  .table.stack td.hl::before{left:10px}
+}
+@media (max-width:960px){.span2{grid-column:auto}}
+.pro{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center}
+.pro-photo{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--card-2);aspect-ratio:5/6}
+.pro-photo img{width:100%;height:100%;object-fit:cover}
+.pro .role{color:var(--accent-2);font-weight:700;font-size:15px;margin:0}
+.pro h1{font-size:clamp(34px,4.4vw,52px);line-height:1.14;letter-spacing:-.04em;font-weight:800;margin:8px 0 0}
+.pro h1 small{display:block;font-size:16px;font-weight:600;letter-spacing:0;color:var(--muted);margin-top:8px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:26px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.facts div{padding:18px 16px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-size:26px;letter-spacing:-.03em;color:var(--accent-2)}
+.facts span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.more{margin-top:14px}
+.more summary{display:inline-flex;align-items:center;gap:8px;cursor:pointer;list-style:none;
+  border:1px solid var(--line-2);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:600}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"▾";font-size:12px}
+.more[open] summary::after{content:"▴"}
+.more summary:hover{border-color:var(--text)}
+.more .tbl{margin-top:14px}
+@media (max-width:960px){
+  .pro{grid-template-columns:1fr;gap:22px}
+  .pro-photo{max-width:260px;aspect-ratio:1/1}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(2){border-right:0}
+  .facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
