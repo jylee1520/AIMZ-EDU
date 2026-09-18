@@ -64,20 +64,6 @@
     }));
   });
 
-  /* self-check → recommended course (opens its tab) */
-  const sc = $('#selfCheck');
-  if (sc) {
-    const fs = $$('fieldset', sc), res = $('#checkResult');
-    sc.addEventListener('change', () => {
-      const scores = fs.map(f => $$('input:checked', f).length);
-      const max = Math.max(...scores);
-      fs.forEach((f, i) => f.classList.toggle('best', max > 0 && scores[i] === max));
-      if (!max) { res.innerHTML = '<span>항목을 체크하면 추천 과정을 알려드립니다.</span>'; return; }
-      const f = fs[scores.indexOf(max)];
-      res.innerHTML = `<span>추천 과정: <b>${f.dataset.course}</b> — ${max}개 항목 해당</span><a class="btn btn-accent btn-sm" href="#${f.dataset.panel}">과정 상세 보기 →</a>`;
-    });
-  }
-
   /* inquiry form → prefilled mail to the address in data-mailto */
   $$('form[data-mailto]').forEach(form => {
     const sel = $('select[name="type"]', form);
@@ -178,4 +164,19 @@
     document.addEventListener('visibilitychange', () => { if (document.hidden) pause(true); else if (!sl.matches(':hover')) pause(false); });
     go(+sl.dataset.start || 0);
   });
+})();
+
+/* 긴 페이지에서 맨 위로 돌아가는 단추 — 한 화면 이상 내려가면 나타난다 */
+(function () {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'totop';
+  b.setAttribute('aria-label', '맨 위로');
+  b.textContent = '↑';
+  document.body.appendChild(b);
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  b.addEventListener('click', () => scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
+  const sync = () => b.classList.toggle('on', scrollY > innerHeight);
+  addEventListener('scroll', sync, { passive: true });
+  sync();
 })();

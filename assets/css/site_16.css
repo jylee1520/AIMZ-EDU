@@ -494,3 +494,103 @@ footer{padding-block:56px 36px;border-top:1px solid var(--line)}
   .hero-bg .slide.screen .shotframe,.hero-bg .slide.screen.on .shotframe{opacity:1;transform:none;translate:none}
   .hero-bg .slide.screen .shotframe img,.hero-bg .slide.screen.on .shotframe img{transform:none}
 }
+/* ---------- _8: Instagram-style blur fill behind small images; a little bigger frame ---------- */
+.hero-bg .slide .blurbg{position:absolute;inset:-40px;z-index:0;background-size:cover;background-position:center;
+  filter:blur(28px) saturate(1.15) brightness(.55);transform:scale(1.1)}
+.hero-bg .slide.on .blurbg{animation:blurdrift 12s ease-in-out infinite alternate}
+@keyframes blurdrift{to{transform:scale(1.22) translate(-2%,1%)}}
+.hero-bg .slide.screen::before{z-index:1;opacity:.7}
+.hero-bg .slide::after{z-index:1}
+.hero-bg .slide figcaption,.hero-bg .shotframe{z-index:2}
+.hero-bg .shotframe{width:min(40%,600px)}
+.hero-bg .shotframe.photo{background:#101218}
+@media (max-width:900px){.hero-bg .shotframe{width:auto}}
+@media (prefers-reduced-motion:reduce){.hero-bg .slide .blurbg{animation:none}}
+
+/* _9: footer has 3 columns now (FAMILY column removed for later) */
+@media (min-width:1081px){.ft{grid-template-columns:1.6fr 1fr 1fr}}
+
+/* ---------- _13: header action buttons — AIMZ LABS in accent red, 교육 문의 in brand navy ---------- */
+.btn-navy{background:var(--navy);color:#fff;border-color:transparent}
+.btn-navy:hover{background:#2b2e40;transform:translateY(-1px)}
+.t-dark .btn-navy{background:#2b3163}
+.t-dark .btn-navy:hover{background:#3a4180}
+@media (max-width:1180px){.hdr-act .btn-labs{display:none}}
+@media (min-width:1041px) and (max-width:1180px){.hdr-act .btn-labs{display:inline-flex}}
+/* 교육과정 페이지 상단의 섹션 바로가기 */
+.jump{padding:22px 0 0}
+
+/* ---------- _14: 교육과정 · 대학 트랙을 함께 여는 머리글 ---------- */
+.sec-side{max-width:640px}
+.sec-side h3{font-size:clamp(22px,2.6vw,32px);line-height:1.26;letter-spacing:-.032em;font-weight:700;margin:0;color:var(--text)}
+.sec-side .lead{margin-top:14px;max-width:none}
+@media (max-width:1080px){.sec-side{max-width:none}}
+
+/* ---------- _22: 본문 속 강조어 ---------- */
+.lead b,.lead strong{color:var(--text);font-weight:700}
+.hero-bg .lead b{color:#fff}
+.card p b,.note b{color:var(--text);font-weight:700}
+
+/* ---------- _23: 휴대폰 화면 ---------- */
+@media (max-width:760px){
+  /* 칸이 많은 표(.stack)는 옆으로 밀게 하지 않고 항목 이름과 함께 세로로 쌓는다 */
+  .tbl{overflow-x:auto}
+  .table.stack{min-width:0;font-size:14px;display:block}
+  .table.stack thead{display:none}
+  .table.stack tbody{display:block}
+  .table.stack tr{display:block;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .table.stack tr:last-child{border-bottom:0}
+  .table.stack td{display:grid;grid-template-columns:84px 1fr;gap:12px;padding:5px 0;border:0;text-align:left}
+  .table.stack td::before{content:attr(data-l);color:var(--muted);font-size:12px;font-weight:700;line-height:1.55}
+  .table.stack td.c{text-align:left}
+  .table.stack td.hl{background:var(--accent-soft);border-radius:10px;padding:7px 10px;margin:2px -10px}
+  /* 칸이 둘뿐인 표는 그대로 두되 글자와 여백만 줄인다 */
+  .table:not(.stack){font-size:14px}
+  .table:not(.stack) th,.table:not(.stack) td{padding:12px 14px}
+  .table:not(.stack) th:first-child,.table:not(.stack) td:first-child{width:44%}
+}
+@media (max-width:960px){
+  html{scroll-padding-top:80px}
+  /* 손가락으로 누를 자리를 넓힌다 */
+  .ft li{padding:0}
+  .ft li a{display:inline-block;padding:9px 0}
+  .crumbbar a{display:inline-block;padding:5px 0}
+  .s-btn{width:44px;height:44px}
+  .s-dots button{height:6px}
+  .s-dots button::before{inset:-16px 0}
+}
+@media (max-width:560px){
+  section{padding-block:64px}
+  .mods{grid-template-columns:repeat(2,1fr)}
+  .mods div{padding:13px}
+  .mods b{font-size:14px}
+  .fb{font-size:12px}
+}
+
+/* ---------- _24: 휴대폰 마무리 ---------- */
+/* 뒤에 나오는 .nav .m-only{display:none}에 눌려 휴대폰 메뉴에서
+   「AIMZ LABS」와 「교육 문의」가 통째로 빠져 있었다 */
+@media (max-width:960px){
+  .nav .m-only{display:block}
+  .nav .m-only:last-child{border-bottom:0}
+}
+/* 콘솔 화면 갈무리가 한쪽으로 몰려 옆에 흰 여백이 생기던 것 */
+.demo .shot.main img{object-position:center}
+@media (max-width:1080px){
+  .demo .shot.main{aspect-ratio:auto}
+  .demo .shot.main img{height:auto}
+}
+
+/* ---------- _26: 긴 페이지 읽기 편하게 ---------- */
+.totop{position:fixed;right:18px;bottom:18px;z-index:60;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--line-2);background:var(--card);color:var(--text);font-size:20px;line-height:1;
+  box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s,background .2s,color .2s}
+.totop.on{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+/* 곁글씨가 바탕에 묻히던 것 — 한 단계 진하게 */
+.note{color:var(--muted)}
+@media (max-width:760px){
+  .totop{right:12px;bottom:12px}
+  .form .fine{font-size:13px;line-height:1.6}
+}
